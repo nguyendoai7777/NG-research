@@ -1,0 +1,31 @@
+<div style="margin: 20px">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Search text" [formControl]="queryInput">
+  </mat-form-field>
+
+
+  <!--<mat-card>
+    <mat-spinner *ngIf="loading; else data"></mat-spinner>
+    <ng-template #data>
+      <mat-list>
+        <ng-container *ngFor="let user of users">
+          <mat-list-item>{{user | json}}</mat-list-item>
+          <mat-divider></mat-divider>
+        </ng-container>
+      </mat-list>
+    </ng-template>
+  </mat-card>-->
+
+  <mat-card>
+    <h1>{{loading2$ | async}} || !: {{!(loading2$ | async)}}</h1>
+    <mat-spinner *ngIf="loading2$ | async as ld"></mat-spinner>
+
+    <mat-list >
+      <mat-list-item *ngFor="let user of users$ | async">{{user | json}}</mat-list-item>
+    </mat-list>
+
+  </mat-card>
+
+
+</div>
