@@ -19,6 +19,7 @@ import { FileDragDropDirective } from './files-drag-drop/files-drag-drop.directi
 import { ConfirmDialogComponent } from "./files-drag-drop/confirm-dialog/confirm-dialog.component";
 import { MultipleFilesComponent } from './multiple-files/multiple-files.component';
 import { MultipleFilesDirective } from './multiple-files/multiple-files.directive';
+import { RxDelayComponent } from './rx-delay/rx-delay.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MultipleFilesDirective } from './multiple-files/multiple-files.directiv
     ConfirmDialogComponent,
     FileDragDropDirective,
     MultipleFilesComponent,
-    MultipleFilesDirective
+    MultipleFilesDirective,
+    RxDelayComponent
   ],
   imports: [
     BrowserModule,

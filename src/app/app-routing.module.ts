@@ -4,12 +4,14 @@ import {CountDownComponent} from './count-down/count-down.component';
 import {HooInputComponent} from "./hoo-input/hoo-input.component";
 import { FilesDragDropComponent } from "./files-drag-drop/files-drag-drop.component";
 import { MultipleFilesComponent } from "./multiple-files/multiple-files.component";
+import { RxDelayComponent } from "./rx-delay/rx-delay.component";
 
 const routes: Routes = [
   { path: 'cd', component: CountDownComponent },
   { path: 'hoo', component: HooInputComponent },
   { path: 'files', component: FilesDragDropComponent },
-  { path: 'mf', component: MultipleFilesComponent }
+  { path: 'mf', component: MultipleFilesComponent },
+  { path: 'dl', component: RxDelayComponent }
 ];
 
 @NgModule({
