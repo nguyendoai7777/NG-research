@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import { InjectionToken, NgModule } from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -20,6 +20,7 @@ import { ConfirmDialogComponent } from "./files-drag-drop/confirm-dialog/confirm
 import { MultipleFilesComponent } from './multiple-files/multiple-files.component';
 import { MultipleFilesDirective } from './multiple-files/multiple-files.directive';
 import { RxDelayComponent } from './rx-delay/rx-delay.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RxDelayComponent } from './rx-delay/rx-delay.component';
     FileDragDropDirective,
     MultipleFilesComponent,
     MultipleFilesDirective,
-    RxDelayComponent
+    RxDelayComponent,
+    DependencyInjectionComponent
   ],
   imports: [
     BrowserModule,
@@ -49,5 +51,4 @@ import { RxDelayComponent } from './rx-delay/rx-delay.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
