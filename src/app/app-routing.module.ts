@@ -6,6 +6,8 @@ import { FilesDragDropComponent } from "./files-drag-drop/files-drag-drop.compon
 import { MultipleFilesComponent } from "./multiple-files/multiple-files.component";
 import { RxDelayComponent } from "./rx-delay/rx-delay.component";
 import { DependencyInjectionComponent } from "./dependency-injection/dependency-injection.component";
+import { DirectiveComponent } from "./directive/directive.component";
+import { DayInWeekPickerComponent } from "./day-in-week-picker/day-in-week-picker.component";
 
 const routes: Routes = [
   { path: 'cd', component: CountDownComponent },
@@ -13,7 +15,9 @@ const routes: Routes = [
   { path: 'files', component: FilesDragDropComponent },
   { path: 'mf', component: MultipleFilesComponent },
   { path: 'dl', component: RxDelayComponent },
-  { path: 'di', component: DependencyInjectionComponent }
+  { path: 'di', component: DependencyInjectionComponent },
+  { path: 'directive', component: DirectiveComponent },
+  { path: 'wp', component: DayInWeekPickerComponent },
 ];
 
 @NgModule({

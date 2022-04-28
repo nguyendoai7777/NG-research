@@ -1,0 +1,16 @@
+<div class="gox">
+  <div class="week-picker-wrapper">
+    <div
+      #capsule
+      *ngFor="let day of daysOfWeek; first as f; last as l; index as i"
+      [ngStyle]="{
+      'margin-right': l && 0,
+      'margin-left': f && 0
+    }"
+      class="capsule"
+      (click)="onSelectOne($event, day, i)"
+      [class.selected]="day.isSelected"
+    >{{day.label}}</div>
+  </div>
+
+</div>

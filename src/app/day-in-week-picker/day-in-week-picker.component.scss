@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  .capsule {
+    padding: 7px 15px;
+    border-radius: 9999px;
+    border: 1px solid dodgerblue;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .week-picker-wrapper {
+    display: flex;
+  }
+  .selected {
+    border-color: deeppink;
+  }
+}
+
+.gox {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}

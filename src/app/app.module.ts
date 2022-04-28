@@ -21,6 +21,9 @@ import { MultipleFilesComponent } from './multiple-files/multiple-files.componen
 import { MultipleFilesDirective } from './multiple-files/multiple-files.directive';
 import { RxDelayComponent } from './rx-delay/rx-delay.component';
 import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { ToggleColorDirective } from './shared/directives/toggle-color.directive';
+import { DirectiveComponent } from './directive/directive.component';
+import { DayInWeekPickerComponent } from './day-in-week-picker/day-in-week-picker.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { DependencyInjectionComponent } from './dependency-injection/dependency-
     MultipleFilesComponent,
     MultipleFilesDirective,
     RxDelayComponent,
-    DependencyInjectionComponent
+    DependencyInjectionComponent,
+    ToggleColorDirective,
+    DirectiveComponent,
+    DayInWeekPickerComponent,
   ],
   imports: [
     BrowserModule,
