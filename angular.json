@@ -34,7 +34,10 @@
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/3rd-party-lib/bs.min.js",
+              "src/assets/3rd-party-lib/ios-picker.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -103,7 +106,10 @@
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/3rd-party-lib/bs.min.js",
+              "src/assets/3rd-party-lib/ios-picker.js"
+            ]
           }
         }
       }

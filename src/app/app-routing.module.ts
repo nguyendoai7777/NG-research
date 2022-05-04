@@ -8,6 +8,8 @@ import { RxDelayComponent } from "./rx-delay/rx-delay.component";
 import { DependencyInjectionComponent } from "./dependency-injection/dependency-injection.component";
 import { DirectiveComponent } from "./directive/directive.component";
 import { DayInWeekPickerComponent } from "./day-in-week-picker/day-in-week-picker.component";
+import { DynamicRenderingComponent } from "./dynamic-rendering/dynamic-rendering.component";
+import { IosStyleDatePickerComponent } from "./ios-style-date-picker/ios-style-date-picker.component";
 
 const routes: Routes = [
   { path: 'cd', component: CountDownComponent },
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'di', component: DependencyInjectionComponent },
   { path: 'directive', component: DirectiveComponent },
   { path: 'wp', component: DayInWeekPickerComponent },
+  { path: 'dr', component: DynamicRenderingComponent },
+  { path: 'dpk', component: IosStyleDatePickerComponent },
 ];
 
 @NgModule({

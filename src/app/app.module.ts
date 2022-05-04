@@ -24,6 +24,11 @@ import { DependencyInjectionComponent } from './dependency-injection/dependency-
 import { ToggleColorDirective } from './shared/directives/toggle-color.directive';
 import { DirectiveComponent } from './directive/directive.component';
 import { DayInWeekPickerComponent } from './day-in-week-picker/day-in-week-picker.component';
+import { DynamicComponent } from './components/dynamic/dynamic.component';
+import { DynamicComponentDirective } from './shared/directives/dynamic-component.directive';
+import { DynamicRenderingComponent } from './dynamic-rendering/dynamic-rendering.component';
+import { DynamicTwoComponent } from './components/dymanic-two/dynamic-two.component';
+import { IosStyleDatePickerComponent } from './ios-style-date-picker/ios-style-date-picker.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +45,11 @@ import { DayInWeekPickerComponent } from './day-in-week-picker/day-in-week-picke
     ToggleColorDirective,
     DirectiveComponent,
     DayInWeekPickerComponent,
+    DynamicComponent,
+    DynamicComponentDirective,
+    DynamicRenderingComponent,
+    DynamicTwoComponent,
+    IosStyleDatePickerComponent,
   ],
   imports: [
     BrowserModule,
