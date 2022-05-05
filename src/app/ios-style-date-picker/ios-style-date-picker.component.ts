@@ -1,7 +1,6 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { debounceTime, Subject } from "rxjs";
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
-import { Rolldate } from "src/assets/3rd-party-lib/ios-picker.js";
+import { RollDate } from "src/assets/3rd-party-lib/ios-picker.js";
 
 @Component({
   selector: 'app-ios-style-date-picker',
@@ -16,11 +15,12 @@ export class IosStyleDatePickerComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    new Rolldate({
+    new RollDate({
       el: '#date-group1-1',
-      format: 'YYYY-MM-DD hh-mm-ss',
+      format: 'DD/MM',
       beginYear: 1990,
       endYear: 2050,
+      trigger: 'tap',
       cfg: {
         language: 'vi',
         cancel: 'Huỷ',

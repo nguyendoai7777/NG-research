@@ -33,10 +33,9 @@ let $ = (selector, flag) => {
   if(typeof selector != 'string' && selector.nodeType){
     return selector;
   }
-
   return flag? document.querySelectorAll(selector) : document.querySelector(selector);
 }
-export function Rolldate(config = {}){
+export function RollDate(config = {}){
   let _this = this,
     el;
 
@@ -74,9 +73,9 @@ export function Rolldate(config = {}){
     }
   }
 }
-Rolldate.prototype = {
-  constructor: Rolldate,
-  baseData: function(){
+RollDate.prototype = {
+  constructor: RollDate,
+  baseData: function() {
     return {
       domId: {
         YYYY: 'rolldate-year',
@@ -101,7 +100,6 @@ Rolldate.prototype = {
           title: 'Pick time',
           cancel: 'Cancel',
           confirm:  'Apply',
-          year:'', month:'', day:'', hour:'', min:'', sec:''
         }
       }
     };
@@ -258,7 +256,7 @@ Rolldate.prototype = {
           if(day != $('#'+domId['DD']+' li', 1).length){
 
             for(let l=1; l<=day; l++){
-              li += `<li class="wheel-item">${l<10? '0'+l : l}${cfg.day}</li>`;
+              li += `<li class="wheel-item">${l<10? '0'+l : l}</li>`;
             }
             $('#'+domId['DD']+' ul').innerHTML = li;
             _this.scroll['DD'].refresh();

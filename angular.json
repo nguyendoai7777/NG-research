@@ -35,8 +35,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/3rd-party-lib/bs.min.js",
-              "src/assets/3rd-party-lib/ios-picker.js"
+
             ]
           },
           "configurations": {
@@ -107,8 +106,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/3rd-party-lib/bs.min.js",
-              "src/assets/3rd-party-lib/ios-picker.js"
+
             ]
           }
         }
