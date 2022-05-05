@@ -36,7 +36,6 @@ let $ = (selector, flag) => {
 
   return flag? document.querySelectorAll(selector) : document.querySelector(selector);
 }
-
 export function Rolldate(config = {}){
   let _this = this,
     el;
@@ -98,11 +97,11 @@ Rolldate.prototype = {
         cancel:null,
         minStep:1,
         trigger: 'tap',
-        lang: {
-          language: 'en',
-          title: JSON.stringify(this),//  === 'en' ? 'Pick time' : 'Chọn thời gian',
-          cancel: this.language == 'en' ? 'Cancel' : 'Huỷ',
-          confirm: this.language == 'en' ? 'Apply' : 'Chọn',
+        cfg: {
+          title: 'Pick time',
+          cancel: 'Cancel',
+          confirm:  'Apply',
+          year:'', month:'', day:'', hour:'', min:'', sec:''
         }
       }
     };
@@ -133,8 +132,8 @@ Rolldate.prototype = {
       ul = '',
       date = config.el? ($(config.el).bindDate || new Date()) : (_this.bindDate || new Date()),
       itemClass = '',
-      lang = config.lang,
-      language = _this.language,
+      cfg = config.cfg,
+      language = cfg.language,
       headerInfo = [...FormatArr],
       headerElement = '';
     for(let i=0; i<len; i++){
@@ -181,7 +180,8 @@ Rolldate.prototype = {
         let day = _this.getMonthlyDay(date.getFullYear(), date.getMonth() + 1);
         for(let l=1; l<=day; l++){
           itemClass = l == date.getDate()? 'active':'';
-          ul += `<li class="wheel-item ${itemClass}" data-index="${domMndex}">${l<10? '0'+ l : l}</li>`;
+          const x = `0${l}`.slice(-2)
+          ul += `<li class="wheel-item ${itemClass}" data-index="${domMndex}">${x}</li>`;
           domMndex ++;
         }
       }else if(f == 'hh'){
@@ -211,9 +211,9 @@ Rolldate.prototype = {
     let $html = `<div class="rolldate-mask"></div>
             <div class="rolldate-panel">
                 <header>
-                    <span class="rolldate-btn rolldate-cancel">${lang.cancel}</span>
-                    ${lang.title}
-                    <span class="rolldate-btn rolldate-confirm">${lang.confirm}</span>
+                    <span class="rolldate-btn rolldate-cancel">${cfg.cancel}</span>
+                    ${cfg.title}
+                    <span class="rolldate-btn rolldate-confirm">${cfg.confirm}</span>
                 </header>
                 <header style="display: flex">${headerElement}</header>
                 <section class="rolldate-content">
@@ -258,7 +258,7 @@ Rolldate.prototype = {
           if(day != $('#'+domId['DD']+' li', 1).length){
 
             for(let l=1; l<=day; l++){
-              li += `<li class="wheel-item">${l<10? '0'+l : l}${lang.day}</li>`;
+              li += `<li class="wheel-item">${l<10? '0'+l : l}${cfg.day}</li>`;
             }
             $('#'+domId['DD']+' ul').innerHTML = li;
             _this.scroll['DD'].refresh();

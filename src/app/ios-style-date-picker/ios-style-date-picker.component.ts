@@ -20,8 +20,13 @@ export class IosStyleDatePickerComponent implements OnInit, AfterViewInit {
       el: '#date-group1-1',
       format: 'YYYY-MM-DD hh-mm-ss',
       beginYear: 1990,
-      endYear: 2002,
-      language: 'en'
+      endYear: 2050,
+      cfg: {
+        language: 'vi',
+        cancel: 'Huỷ',
+        confirm: 'Lưu',
+        title: 'Chọn thời gian',
+      }
     })
   }
 }
