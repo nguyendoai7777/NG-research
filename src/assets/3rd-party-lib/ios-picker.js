@@ -97,9 +97,7 @@ RollDate.prototype = {
         minStep:1,
         trigger: 'tap',
         cfg: {
-          title: 'Pick time',
-          cancel: 'Cancel',
-          confirm:  'Apply',
+          language: 'vi'
         }
       }
     };
@@ -121,7 +119,6 @@ RollDate.prototype = {
   },
   createUI: function(){
     let _this = this,
-
       data = _this.baseData(),
       config = _this.config,
       domId = data.domId,
@@ -209,9 +206,9 @@ RollDate.prototype = {
     let $html = `<div class="rolldate-mask"></div>
             <div class="rolldate-panel">
                 <header>
-                    <span class="rolldate-btn rolldate-cancel">${cfg.cancel}</span>
-                    ${cfg.title}
-                    <span class="rolldate-btn rolldate-confirm">${cfg.confirm}</span>
+                    <span class="rolldate-btn rolldate-cancel">${cfg.language === 'en' ? 'Cancel' : 'Huỷ'}</span>
+                    ${cfg.language === 'en' ? 'Pick time' : 'Chọn thời gian'}
+                    <span class="rolldate-btn rolldate-confirm">${cfg.language === 'en' ? 'Apply' : 'Lưu'}</span>
                 </header>
                 <header style="display: flex">${headerElement}</header>
                 <section class="rolldate-content">

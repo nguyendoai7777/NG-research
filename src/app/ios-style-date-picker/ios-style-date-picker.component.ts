@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-
 import { RollDate } from "src/assets/3rd-party-lib/ios-picker.js";
+import {IOSPickerStyle} from "src/assets/3rd-party-lib/ios-class.refactor";
 
 @Component({
   selector: 'app-ios-style-date-picker',
@@ -23,9 +23,6 @@ export class IosStyleDatePickerComponent implements OnInit, AfterViewInit {
       trigger: 'tap',
       cfg: {
         language: 'vi',
-        cancel: 'Huỷ',
-        confirm: 'Lưu',
-        title: 'Chọn thời gian',
       }
     })
   }

@@ -1,6 +1,10 @@
 export interface RollDateProp {
   el: string;
-  format: 'DD-MM' | 'MM-YYYY' | 'DD-MM-YYYY' | 'YYYY-MM-DD' | 'YYYY-MM' | 'YYYY' | 'DD' | 'MM' | 'hh' | 'mm' | 'ss' | 'hh:mm:ss' | 'hh:mm' | 'mm:ss';
+  format:  'DD/MM' | 'MM/YYYY' | 'DD/MM/YYYY' | 'YYYY/MM/DD' | 'YYYY/MM' |
+    'YYYY-DD-MM' | 'YYYY/DD/MM' |
+    'DD-MM' | 'MM-YYYY' | 'DD-MM-YYYY' | 'YYYY-MM-DD' | 'YYYY-MM' |
+    'YYYY' | 'DD' | 'MM' |
+    'hh' | 'mm' | 'ss' | 'hh:mm:ss' | 'hh:mm' | 'mm:ss';
   beginYear: number;
   endYear: number;
   init?: () => void;
@@ -11,9 +15,6 @@ export interface RollDateProp {
   trigger: 'tap' | 'click';
   cfg?: {
     language?: 'vi' | 'en';
-    title?: string;
-    cancel?: string;
-    confirm?:  string;
   }
 }
 
