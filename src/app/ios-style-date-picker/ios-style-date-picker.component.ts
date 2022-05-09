@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RollDate } from "src/assets/3rd-party-lib/ios-picker.js";
-import {IOSPickerStyle} from "src/assets/3rd-party-lib/ios-class.refactor";
 
 @Component({
   selector: 'app-ios-style-date-picker',
